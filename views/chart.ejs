@@ -15,12 +15,18 @@
     </header>
     <h2><%= title %></h2>
 
-    <% for (var score_pair of locals.chart) { %>
-      <%= score_pair %>
-    <% } %>
-
-
-
+    <table>
+      <tr>
+        <th>Letter</th>
+        <th>Value</th>
+      </tr>
+      <% for (var scoring in chart) { %>
+        <tr>
+          <td><%= scoring %></td>
+          <td><%= chart[scoring]; %></td>
+        </tr>
+      <% } %>
+    </table>
 
   </body>
 </html>

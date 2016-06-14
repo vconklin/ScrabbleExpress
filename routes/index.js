@@ -16,5 +16,8 @@ router.get('/scrabble/chart', ScrabbleController.getChart);
 /* GET score page */
 router.get('/scrabble/score', ScrabbleController.getScore);
 
+/* GET score page for individual word */
+// router.get('/scrabble/score/:word', Scrabble.Controller)
+
 
 module.exports = router;

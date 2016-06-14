@@ -7,7 +7,7 @@ var ScrabbleController = {
 
     locals.chart = scrabble.scoring_chart;
 
-    res.render('chart', { title: 'Scoring Chart' });
+    res.render('chart', { title: 'Scoring Chart', chart: locals.chart });
   },
 
   getScore: function (req, res, next) {
