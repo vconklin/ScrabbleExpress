@@ -14,10 +14,13 @@ router.get('/', function (req, res, next) {
 router.get('/scrabble/chart', ScrabbleController.getChart);
 
 /* GET score page */
-router.get('/scrabble/score', ScrabbleController.getScore);
+router.get('/scrabble/score', ScrabbleController.getScoreForm);
+
+/* POST score page */
+router.post('/scrabble/score', ScrabbleController.createScore);
 
 /* GET score page for individual word */
-// router.get('/scrabble/score/:word', Scrabble.Controller)
+router.get('/scrabble/score/:word', ScrabbleController.getScoreOfWord);
 
 
 module.exports = router;

@@ -10,8 +10,24 @@ var ScrabbleController = {
     res.render('chart', { title: 'Scoring Chart', chart: locals.chart });
   },
 
-  getScore: function (req, res, next) {
-    res.render('score', { title: 'Score' });
+  getScoreForm: function (req, res, next) {
+    res.render('score', { title: 'Score A Word' });
+  },
+
+  createScore: function (req, res, next) {
+    var locals = {};
+
+    locals.word = req.body.word;
+
+    res.render('word_score', { title: locals.word + "'s Score", word: locals.word });
+  },
+
+  getScoreOfWord: function (req, res, next) {
+    var locals = {};
+
+    locals.word = req.params.word;
+
+    res.render('word_score', { title: locals.word + "'s Score", word: locals.word });
   }
 };
 
