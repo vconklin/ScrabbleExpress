@@ -1,9 +1,13 @@
-// var Scrabble = require('../lib/scrabble.js');
-// var scrabble = new Scrabble();
+var Scrabble = require('../lib/scrabble.js');
+var scrabble = new Scrabble();
 
 var ScrabbleController = {
   getChart: function (req, res, next) {
-    res.render('chart', { title: 'Chart' });
+    var locals = {};
+
+    locals.chart = scrabble.scoring_chart;
+
+    res.render('chart', { title: 'Scoring Chart' });
   },
 
   getScore: function (req, res, next) {
